@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí | Nino Raúl Suárez Loras</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/sobre-mi.css">
+</head>
+<body class="page-sobre-mi">
+
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <div class="page-transition-overlay" id="pageTransitionOverlay"></div>
+
+    <canvas id="molecules"></canvas>
+
+    <button class="hamburger-menu" id="hamburgerBtn" aria-label="Abrir Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <ul>
+            <li><a href="index.html" class="nav-link">01. Inicio</a></li>
+            <li><a href="perfil.html" class="nav-link active">02. Perfil & Mapa</a></li>
+            <li><a href="sobre-mi.html" class="nav-link active">03. Sobre Mí</a></li>
+            <li><a href="formacion.html" class="nav-link ">05. Formación</a></li>
+            <li><a href="docencia.html" class="nav-link">06. Cátedra & Docencia</a></li>
+            <li><a href="investigaciones.html" class="nav-link">07. Investigaciones</a></li>
+            <li><a href="habilidades.html" class="nav-link">08. Habilidades & Tools</a></li>
+            <li><a href="proyectos.html" class="nav-link">09. Trayectoria & Proyectos</a></li>
+            <li><a href="formacion.html" class="nav-link">10. Estudios & Diplomados</a></li>
+            <li><a href="contacto.html" class="nav-link">11. Contacto</a></li>
+        </ul>
+    </div>
+
+    <main class="single-viewport-container" id="bentoGrid">
+
+        <div class="left-panel">
+            
+            <header class="pitch-card-hero card-animated float-delay-1">
+                <div class="pitch-badge-wrapper">
+                    <span class="pitch-tag">Propuesta de Valor</span>
+                    <span class="pitch-status">Disponible para Proyectos</span>
+                </div>
+                <h1 class="pitch-title">Ingeniería Petroquímica, Liderazgo Académico & Divulgación</h1>
+                <p class="pitch-description">
+                    Especialista que integra el rigor técnico del laboratorio y la investigación petroquímica con la elocuencia de la docencia, la oratoria estratégica y la comunicación en entornos digitales y escenarios.
+                </p>
+
+                <div class="hero-metrics-row">
+                    <div class="metric-item">
+                        <span class="metric-num">3+</span>
+                        <span class="metric-lbl">Años Experiencia</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-num">12+</span>
+                        <span class="metric-lbl">Eventos & MUNs</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-num">100%</span>
+                        <span class="metric-lbl">Rigor Técnico</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="values-wrapper">
+                <h2 class="section-micro-heading">Valores & Criterio Profesional</h2>
+                <div class="values-grid">
+                    <article class="value-box card-animated float-delay-2">
+                        <div class="value-icon">🔬</div>
+                        <div class="value-text">
+                            <h3>Rigor Científico</h3>
+                            <p>Análisis metódico, criterio técnico e investigación aplicada en laboratorio.</p>
+                        </div>
+                    </article>
+
+                    <article class="value-box card-animated float-delay-3">
+                        <div class="value-icon">📚</div>
+                        <div class="value-text">
+                            <h3>Vocación Docente</h3>
+                            <p>Transformación educativa con pedagogía clara, empatía y liderazgo inspirador.</p>
+                        </div>
+                    </article>
+
+                    <article class="value-box card-animated float-delay-2">
+                        <div class="value-icon">🤝</div>
+                        <div class="value-text">
+                            <h3>Liderazgo & Gestión</h3>
+                            <p>Coordinación estratégica de sociedades científicas y comités académicos.</p>
+                        </div>
+                    </article>
+
+                    <article class="value-box card-animated float-delay-3">
+                        <div class="value-icon">🎙️</div>
+                        <div class="value-text">
+                            <h3>Divulgación & Oratoria</h3>
+                            <p>Comunicación de alto impacto en auditorios, aulas y transmisiones en vivo.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </div>
+
+        <div class="right-panel">
+            
+            <section class="carousel-card-wrapper card-animated float-delay-4">
+                <div class="carousel-header">
+                    <h2 class="section-micro-heading">Trayectoria en Acción</h2>
+                    <span class="carousel-counter" id="carouselCounter">01 / 09</span>
+                </div>
+
+                <div class="carousel-viewport">
+                    <div class="carousel-slide active">
+                        <div class="slide-img-container">
+                            <img src="assets/images/1.png" alt="Facilitador de Oratoria" class="foto-centrada">
+                        </div>
+                        <p class="slide-caption"><strong>Facilitador de Oratoria:</strong> Dirección de talleres comunicativos en STEAM Academy (Cochabamba, 2026).</p>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <div class="slide-img-container">
+                            <img src="assets/images/2.png" alt="Jurado Calificador">
+                        </div>
+                        <p class="slide-caption"><strong>Jurado Calificador:</strong> Evaluación académica en defensas de Proyectos de Grado Técnico (Trinidad, 2025).</p>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <div class="slide-img-container">
+                            <img src="assets/images/3.png" alt="Coordinación en WASI Space" class="foto-centrada">
+                        </div>
+                        <p class="slide-caption"><strong>Coordinación en WASI Space:</strong> Disertante en talleres de programación para la UAB JB (Trinidad, 2026).</p>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <div class="slide-img-container">
+                            <img src="assets/images/4.jpeg" alt="Asesoría Educativa">
+                        </div>
+                        <p class="slide-caption"><strong>Asesoría Educativa en RENAMUN:</strong> Orientación estratégica en debate estudiantil (Trinidad, 2025).</p>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <div class="slide-img-container">
+                            <img src="assets/images/5.jpg" alt="Presidencia Científica">
+                        </div>
+                        <p class="slide-caption"><strong>Presidencia Científica:</strong> Liderazgo en la Sociedad de Ingeniería Petroquímica (Villa Montes, 2022).</p>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <div class="slide-img-container">
+                            <img src="assets/images/6.jpg" alt="Gestión de Laboratorio">
+                        </div>
+                        <p class="slide-caption"><strong>Gestión de Laboratorio:</strong> Supervisión y asistencia técnica en laboratorio científico (Trinidad, 2025).</p>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <div class="slide-img-container">
+                            <img src="assets/images/7.jpeg" alt="Labor Diplomática" >
+                        </div>
+                        <p class="slide-caption"><strong>Labor Diplomática Estudiantil:</strong> Representación activa en sesiones de la Embajada RENAMUN (Trinidad, 2025).</p>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <div class="slide-img-container">
+                            <img src="assets/images/8.jpeg" alt="Dirección Académica 2024">
+                        </div>
+                        <p class="slide-caption"><strong>Dirección Académica:</strong> Gestión educativa para el Modelo ChristaMun (Trinidad, 2024).</p>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <div class="slide-img-container">
+                            <img src="assets/images/9.jpeg" alt="Dirección Académica 2025" >
+                        </div>
+                        <p class="slide-caption"><strong>Dirección Académica:</strong> Consolidación del programa formativo ChristaMun (Trinidad, 2025).</p>
+                    </div>
+                </div>
+
+                <div class="carousel-footer-controls">
+                    <button class="btn-carousel" id="prevBtn" aria-label="Anterior">❮</button>
+                    <button class="btn-carousel" id="nextBtn" aria-label="Siguiente">❯</button>
+                </div>
+            </section>
+
+            <section class="facets-block">
+                <div class="facet-pill card-animated float-delay-5">
+                    <div class="facet-desc">
+                        <strong>Música & Canto 🎵</strong>
+                        <span>Proyectos e interpretación artística.</span>
+                    </div>
+                    <div class="facet-links">
+                        <a href="ninoraul/ninoraul.html" class="btn-accent-sm">Web site oficial→</a>
+                        <a href="https://linktr.ee/nino_raul" target="_blank" rel="noopener noreferrer" class="btn-outline-sm">Linktree ↗</a>
+                    </div>
+                </div>
+
+                <div class="facet-pill card-animated float-delay-6">
+                    <div class="facet-desc">
+                        <strong>Caster & Streaming 🎙️</strong>
+                        <span>Locución, narración y conducción.</span>
+                    </div>
+                    <div class="facet-links">
+                        <a href="https://linktr.ee/moncheTV" target="_blank" rel="noopener noreferrer" class="btn-outline-sm">MoncheTV ↗</a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+    <script src="js/molecules.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/sobre-mi.js"></script>
+</body>
+</html>

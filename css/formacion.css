@@ -1,0 +1,443 @@
+/*======================================================
+  ESTILOS DEL MENÚ HAMBURGUESA Y OVERLAY
+======================================================*/
+
+/* Botón de 3 líneas en la esquina superior derecha */
+.hamburger-menu {
+    position: fixed !important;
+    top: 25px !important;
+    right: 25px !important;
+    z-index: 1000 !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    padding: 8px !important;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hamburger-menu:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.hamburger-menu span {
+    width: 22px;
+    height: 2px;
+    background-color: var(--text-primary, #2F2422);
+    border-radius: 2px;
+    display: block;
+}
+
+/* Panel Desplegable (Oculto a la derecha fuera de pantalla) */
+.menu-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 300px !important;
+    height: 100vh !important;
+    background: rgba(250, 248, 244, 0.96) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    z-index: 999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transform: translateX(100%) !important; /* Oculta la lista */
+    transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) !important;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.06);
+}
+
+/* Cuando presionas el botón y el JS le añade la clase 'open' */
+.menu-overlay.open {
+    transform: translateX(0) !important;
+}
+
+.menu-overlay ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+}
+
+.menu-overlay a {
+    text-decoration: none !important;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 0.95rem !important;
+    color: var(--text-primary, #2F2422) !important;
+    transition: color 0.3s ease;
+}
+
+.menu-overlay a:hover, 
+.menu-overlay a.active {
+    color: var(--border-terracota, #8C4336) !important;
+    font-weight: 700 !important;
+}
+/*======================================================
+  ESTILOS FORMACIÓN - PORTAFOLIO NINO SUÁREZ
+======================================================*/
+:root {
+    --bg-color: #FAF8F4;
+    --text-primary: #2F2422;
+    --text-secondary: #554A48;
+    
+    --border-terracota: #8C4336;
+    --border-terracota-hover: #A65244;
+    --terracota-glow: rgba(166, 82, 68, 0.22);
+    --transition-curve: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+body.page-formacion {
+    background: linear-gradient(180deg, #FAF8F4 0%, #F6F2EB 100%);
+    font-family: 'Manrope', sans-serif;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Fijo en Escritorio */
+    position: relative;
+}
+
+/* CANVAS DE MOLÉCULAS */
+#molecules {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* WRAPPER PRINCIPAL */
+.formacion-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    padding: 25px 45px 15px 45px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* HERO ENCABEZADO */
+.formacion-hero {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.section-micro-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--border-terracota);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.main-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 2px 0 4px 0;
+    color: var(--text-primary);
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* BENTO GRID DE 3 COLUMNAS COMPACTAS */
+.formacion-grid {
+    max-width: 1300px;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* TARJETAS GLASSMORPHISM */
+.formacion-card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1.5px solid var(--border-terracota);
+    border-radius: 14px;
+    padding: 18px 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.card-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 2px 0 0 0;
+    color: var(--text-primary);
+}
+
+.card-tag {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--border-terracota);
+    font-weight: 700;
+}
+
+/* CONTENIDO INTERNO TIMELINE */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.timeline-item {
+    border-left: 2px solid rgba(140, 67, 54, 0.25);
+    padding-left: 10px;
+    position: relative;
+}
+
+.timeline-item h3 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.timeline-item .institution {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin: 2px 0 0 0;
+}
+
+.badge-status {
+    font-size: 0.62rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 2px;
+}
+
+.badge-status.verde {
+    background: rgba(46, 125, 50, 0.12);
+    color: #2E7D32;
+}
+
+.badge-status.terracota {
+    background: rgba(140, 67, 54, 0.12);
+    color: var(--border-terracota);
+}
+
+.time-tag {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--border-terracota);
+}
+
+/* LISTAS Y CHIPS */
+.bullet-list {
+    padding-left: 12px;
+    margin: 4px 0 0 0;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.bullet-list li {
+    margin-bottom: 2px;
+}
+
+.innova-box {
+    background: rgba(234, 208, 200, 0.25);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px dashed rgba(140, 67, 54, 0.3);
+}
+
+.innova-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--border-terracota);
+    display: block;
+    margin-bottom: 6px;
+}
+
+.skills-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.chip {
+    font-size: 0.68rem;
+    background: #FFF;
+    border: 1px solid var(--border-terracota);
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.additional-box h3 {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 4px 0;
+}
+
+/* FOOTER */
+.formacion-footer {
+    text-align: center;
+}
+
+.back-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-bottom: 1.5px solid var(--border-terracota);
+    padding-bottom: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--border-terracota);
+}
+
+/* ANIMACIONES */
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+.card-animated {
+    animation: floatAnimation 5s ease-in-out infinite;
+}
+
+.float-delay-1 { animation-delay: 0s; }
+.float-delay-2 { animation-delay: 0.8s; }
+.float-delay-3 { animation-delay: 1.6s; }
+
+.formacion-card:hover {
+    animation-play-state: paused !important;
+    transform: translateY(-6px) scale(1.01) !important;
+    border-color: var(--border-terracota-hover) !important;
+    box-shadow: 0 10px 24px var(--terracota-glow) !important;
+}
+
+/* RESPONSIVO MÓVILES */
+@media screen and (max-width: 900px) {
+    body.page-formacion {
+        overflow-y: auto !important;
+        height: auto !important;
+    }
+
+    .formacion-wrapper {
+        height: auto !important;
+        padding: 85px 18px 30px 18px !important;
+        gap: 20px;
+    }
+
+    .formacion-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .card-animated {
+        animation: none !important;
+    }
+}
+/*======================================================
+  ADAPTACIÓN EXCLUSIVA PARA MÓVILES (<= 900px)
+======================================================*/
+@media screen and (max-width: 900px) {
+    
+    body.page-formacion {
+        overflow-y: auto !important; /* Habilita el desplazamiento vertical en móviles */
+        height: auto !important;
+        min-height: 100vh;
+    }
+
+    .formacion-wrapper {
+        height: auto !important;
+        width: 100% !important;
+        padding: 90px 16px 40px 16px !important; /* Espacio superior para el botón de menú */
+        gap: 25px !important;
+        box-sizing: border-box !important;
+    }
+
+    .formacion-hero {
+        padding: 0 10px;
+    }
+
+    .main-title {
+        font-size: 2.1rem !important;
+    }
+
+    .subtitle {
+        font-size: 0.85rem !important;
+    }
+
+    /* Transformación de la cuadrícula a vista vertical */
+    .formacion-grid {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+        margin: 0 !important;
+    }
+
+    .formacion-card {
+        padding: 16px 18px !important;
+    }
+
+    /* Desactivación de animaciones en pantallas táctiles */
+    .card-animated {
+        animation: none !important;
+        transform: none !important;
+    }
+
+    .formacion-card:hover {
+        transform: none !important;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    /* Menú adaptado para dispositivos móviles */
+    .menu-overlay {
+        width: 85% !important;
+        max-width: 300px !important;
+    }
+}
+
+/* AJUSTE PARA PANTALLAS MÁS PEQUEÑAS (<= 480px) */
+@media screen and (max-width: 480px) {
+    .formacion-wrapper {
+        padding: 80px 12px 30px 12px !important;
+    }
+
+    .skills-chips {
+        gap: 4px;
+    }
+
+    .chip {
+        font-size: 0.65rem;
+        padding: 2px 6px;
+    }
+}

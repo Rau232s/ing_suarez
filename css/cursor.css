@@ -1,0 +1,42 @@
+/* Ring / Aro exterior (-15% de tamaño) */
+.cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 27px; /* Reducido de 32px */
+    height: 27px; /* Reducido de 32px */
+    border: 1.5px solid var(--text, #2F2422);
+    border-radius: 50%;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+                height 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+                border-color 0.3s ease,
+                background-color 0.3s ease;
+    will-change: transform;
+}
+
+/* Punto central */
+.cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 4px;
+    background-color: var(--accent, #A96E65);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+}
+
+/* Estado Expandido al pasar sobre botones o elementos interactivos (-15% de tamaño) */
+.cursor-ring.expand {
+    width: 47px; /* Reducido de 55px */
+    height: 47px; /* Reducido de 55px */
+    border-color: var(--accent, #A96E65);
+    background-color: rgba(169, 110, 101, 0.05);
+}

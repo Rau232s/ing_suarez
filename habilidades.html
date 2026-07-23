@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilidades & Productos | Nino Raúl Suárez Loras</title>
+
+    <!-- Tipografías Oficiales -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Reales -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/molecules.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/habilidades.css">
+</head>
+<body class="page-habilidades">
+
+    <!-- Transición y Cursor Custom -->
+    <div class="page-transition-overlay" id="pageTransitionOverlay"></div>
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Canvas de Moléculas -->
+    <canvas id="molecules"></canvas>
+
+    <!-- Menú Hamburguesa -->
+    <button class="hamburger-menu" id="hamburgerBtn" aria-label="Abrir Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Overlay Navegación Completa (Correcto: Único Active en 08) -->
+    <div class="menu-overlay" id="menuOverlay">
+        <ul>
+            <li><a href="index.html" class="nav-link">01. Inicio</a></li>
+            <li><a href="perfil.html" class="nav-link">02. Perfil & Mapa</a></li>
+            <li><a href="sobre-mi.html" class="nav-link">03. Sobre Mí</a></li>
+            <li><a href="formacion.html" class="nav-link">05. Formación</a></li>
+            <li><a href="docencia.html" class="nav-link">06. Cátedra & Docencia</a></li>
+            <li><a href="investigaciones.html" class="nav-link">07. Investigaciones</a></li>
+            <li><a href="habilidades.html" class="nav-link active">08. Habilidades & Tools</a></li>
+            <li><a href="proyectos.html" class="nav-link">09. Trayectoria & Proyectos</a></li>
+            <li><a href="formacion.html" class="nav-link">10. Estudios & Diplomados</a></li>
+            <li><a href="contacto.html" class="nav-link">11. Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- Layout Single Viewport Compacto -->
+    <main class="habilidades-wrapper">
+        
+        <!-- Encabezado Hero -->
+        <header class="habilidades-hero">
+            <span class="section-micro-tag">08 / COMPETENCIAS EN ACCIÓN</span>
+            <h1 class="main-title">Habilidades & Productos</h1>
+            <p class="subtitle">
+                Entregables tangibles, desarrollo de herramientas digitales, ingeniería y metodologías educativas.
+            </p>
+        </header>
+
+        <!-- Bento Grid de 3 Columnas -->
+        <section class="habilidades-grid">
+
+            <!-- Columna 1: Productos Educativos & STEAM -->
+            <article class="habilidades-card card-animated float-delay-1">
+                <div class="card-header">
+                    <span class="card-tag">01 / Tecnología Educativa</span>
+                    <h2>Productos Pedagógicos</h2>
+                </div>
+                <div class="card-body">
+                    
+                    <div class="product-item">
+                        <span class="product-badge">Entregable</span>
+                        <h3>Módulos de Enseñanza con IA</h3>
+                        <p class="desc">Diseño de guías interactivas e integración de inteligencia artificial para personalizar el aprendizaje en ciencias exactas.</p>
+                    </div>
+
+                    <div class="product-item">
+                        <span class="product-badge">Entregable</span>
+                        <h3>Talleres STEAM & Oratoria</h3>
+                        <p class="desc">Estructuración de dinámicas prácticas de debate diplomático (MUN) y laboratorios de resolución de problemas.</p>
+                    </div>
+
+                    <div class="tools-box">
+                        <span class="tools-title">Herramientas:</span>
+                        <div class="skills-chips">
+                            <span class="chip">Prompts IA</span>
+                            <span class="chip">STEAM</span>
+                            <span class="chip">E-learning</span>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- Columna 2: Ingeniería, Datos & Laboratorio -->
+            <article class="habilidades-card card-animated float-delay-2">
+                <div class="card-header">
+                    <span class="card-tag">02 / Análisis & Métodos</span>
+                    <h2>Entregables Técnicos</h2>
+                </div>
+                <div class="card-body">
+                    
+                    <div class="product-item">
+                        <span class="product-badge">Entregable</span>
+                        <h3>Modelos Matemáticos & Diagnósticos</h3>
+                        <p class="desc">Desarrollo de modelos de indicadores (Modelo HI-GI) y diagnósticos de Seguridad y Salud Ocupacional (SGSST).</p>
+                    </div>
+
+                    <div class="product-item">
+                        <span class="product-badge">Entregable</span>
+                        <h3>Protocolos de Laboratorio & Control</h3>
+                        <p class="desc">Procedimientos estandarizados para muestreo de agua, espectrofotometría y análisis químico cuantitativo.</p>
+                    </div>
+
+                    <div class="tools-box">
+                        <span class="tools-title">Herramientas:</span>
+                        <div class="skills-chips">
+                            <span class="chip principal">Excel Avanzado</span>
+                            <span class="chip">Espectrofotometría</span>
+                            <span class="chip">Normativa ISO/SGSST</span>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+            <!-- Columna 3: Desarrollo Web & Diseño Gráfico -->
+            <article class="habilidades-card card-animated float-delay-3">
+                <div class="card-header">
+                    <span class="card-tag">03 / Software & Medios</span>
+                    <h2>Desarrollo & Diseño</h2>
+                </div>
+                <div class="card-body">
+                    
+                    <div class="product-item">
+                        <span class="product-badge tech">Producto Web</span>
+                        <h3>Interfaces & Portafolios Web</h3>
+                        <p class="desc">Maquetación de sitios web interactivos, resposivos y de alto rendimiento utilizando HTML5, CSS3 puro y JavaScript vanilla.</p>
+                    </div>
+
+                    <div class="product-item">
+                        <span class="product-badge tech">Producto Visual</span>
+                        <h3>Material Gráfico & Identidad</h3>
+                        <p class="desc">Diseño de infografías académicas, diagramas de procesos, cartelería institucional y recursos digitales de difusión.</p>
+                    </div>
+
+                    <div class="tools-box">
+                        <span class="tools-title">Herramientas:</span>
+                        <div class="skills-chips">
+                            <span class="chip tech">HTML5 / CSS3 / JS</span>
+                            <span class="chip tech">Diseño Gráfico</span>
+                            <span class="chip">UI/UX Layout</span>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Footer Flotante -->
+        <footer class="habilidades-footer">
+            <a href="perfil.html" class="back-link">
+                <span>←</span> Volver al perfil
+            </a>
+        </footer>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/cursor.js" defer></script>
+    <script src="js/molecules.js" defer></script>
+    <script src="js/habilidades.js" defer></script>
+</body>
+</html>

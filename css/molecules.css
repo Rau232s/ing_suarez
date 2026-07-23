@@ -1,0 +1,18 @@
+/*======================================================
+CANVAS DE MOLÉCULAS Y PARTÍCULAS DE FONDO
+======================================================*/
+
+#molecules {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* Capa de fondo por detrás del contenido (0) pero visible */
+    z-index: 0; 
+    /* Permite que los clics atraviesen el canvas y lleguen al contenido/botones */
+    pointer-events: none; 
+    /* Optimización de renderizado para aceleración por GPU */
+    will-change: transform;
+    display: block;
+}

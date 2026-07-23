@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trayectoria & Proyectos | Nino Raúl Suárez Loras</title>
+
+    <!-- Tipografías Oficiales -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Reales -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/molecules.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/proyectos.css">
+</head>
+<body class="page-proyectos">
+
+    <!-- Transición y Cursor Custom -->
+    <div class="page-transition-overlay" id="pageTransitionOverlay"></div>
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Canvas de Moléculas -->
+    <canvas id="molecules"></canvas>
+
+    <!-- Menú Hamburguesa -->
+    <button class="hamburger-menu" id="hamburgerBtn" aria-label="Abrir Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Overlay Navegación Completa (Active únicamente en 09) -->
+    <div class="menu-overlay" id="menuOverlay">
+        <ul>
+            <li><a href="index.html" class="nav-link">01. Inicio</a></li>
+            <li><a href="perfil.html" class="nav-link">02. Perfil & Mapa</a></li>
+            <li><a href="sobre-mi.html" class="nav-link">03. Sobre Mí</a></li>
+            <li><a href="formacion.html" class="nav-link">05. Formación</a></li>
+            <li><a href="docencia.html" class="nav-link">06. Cátedra & Docencia</a></li>
+            <li><a href="investigaciones.html" class="nav-link">07. Investigaciones</a></li>
+            <li><a href="habilidades.html" class="nav-link">08. Habilidades & Tools</a></li>
+            <li><a href="proyectos.html" class="nav-link active">09. Trayectoria & Proyectos</a></li>
+            <li><a href="formacion.html" class="nav-link">10. Estudios & Diplomados</a></li>
+            <li><a href="contacto.html" class="nav-link">11. Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- Layout Wrapper -->
+    <main class="proyectos-wrapper">
+        
+        <!-- Encabezado Hero -->
+        <header class="proyectos-hero">
+            <span class="section-micro-tag">09 / PRODUCTOS REALES & MARCAS</span>
+            <h1 class="main-title">Trayectoria & Proyectos</h1>
+            <p class="subtitle">
+                Ecosistemas educativos, ingeniería, desarrollo web y creación de marcas visuales en ejecución.
+            </p>
+        </header>
+
+        <!-- CARRUSEL INFINITO FULL-WIDTH -->
+        <section class="carousel-container" id="carouselContainer">
+            <div class="carousel-track" id="carouselTrack">
+
+                <!-- TARJETA 01: IIM -->
+                <article class="project-card" data-project="iim">
+                    <div class="card-media">
+                        <!-- Estructura con fallback de muestra: al cambiar tus imágenes apuntaremos a assets/img/proyectos/ -->
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop" class="slide-img active" alt="IIM - Portada 1">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop" class="slide-img" alt="IIM - Portada 2">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop" class="slide-img" alt="IIM - Portada 3">
+                        <div class="media-overlay"></div>
+                    </div>
+                    <div class="card-info">
+                        <span class="project-tag">Fundador & Dir. Académico</span>
+                        <h2>IIM — Instituto de Inteligencias Múltiples</h2>
+                        <p class="project-desc">Ecosistema multidisciplinar de formación activa en arte, ciencias exactas, música y lógica.</p>
+                        <!-- Botón desplegable centrado -->
+                        <div class="card-action">
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-project">Visitar Proyecto ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- TARJETA 02: KÉRAVNOS STUDIO -->
+                <article class="project-card" data-project="keravnos">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop" class="slide-img active" alt="Kéravnos - Obras 1">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=800&auto=format&fit=crop" class="slide-img" alt="Kéravnos - Obras 2">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=800&auto=format&fit=crop" class="slide-img" alt="Kéravnos - Obras 3">
+                        <div class="media-overlay"></div>
+                    </div>
+                    <div class="card-info">
+                        <span class="project-tag">Co-Fundador & Brand Lead</span>
+                        <h2>Kéravnos Studio Constructora</h2>
+                        <p class="project-desc">Identidad de marca corporativa, diagnóstico SGSST y gestión de proyectos de infraestructura.</p>
+                        <div class="card-action">
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="btn-project">Visitar Proyecto ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- TARJETA 03: KITSUNE DIVISION -->
+                <article class="project-card" data-project="kitsune">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop" class="slide-img active" alt="Kitsune - Media 1">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop" class="slide-img" alt="Kitsune - Media 2">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop" class="slide-img" alt="Kitsune - Media 3">
+                        <div class="media-overlay"></div>
+                    </div>
+                    <div class="card-info">
+                        <span class="project-tag">Lead Designer & Dev</span>
+                        <h2>Kitsune Division</h2>
+                        <p class="project-desc">Estudio creativo enfocado en identidad gráfica, edición multimedia, branding y maquetación.</p>
+                        <div class="card-action">
+                            <a href="https://instagram.com/principe.bazar" target="_blank" rel="noopener noreferrer" class="btn-project">Visitar Instagram ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- TARJETA 04: NINO RAÚL WEBSITE -->
+                <article class="project-card" data-project="website">
+                    <div class="card-media">
+                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=800&auto=format&fit=crop" class="slide-img active" alt="Nino Website 1">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop" class="slide-img" alt="Nino Website 2">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" class="slide-img" alt="Nino Website 3">
+                        <div class="media-overlay"></div>
+                    </div>
+                    <div class="card-info">
+                        <span class="project-tag">Full Developer & Creador</span>
+                        <h2>Nino Raúl — Official Web</h2>
+                        <p class="project-desc">Portafolio interactivo desarrollado en HTML5/CSS3/JS con renderizado de canvas y diseño bento.</p>
+                        <div class="card-action">
+                            <a href="index.html" class="btn-project">Ver Arquitectura ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Footer Flotante -->
+        <footer class="proyectos-footer">
+            <a href="perfil.html" class="back-link">
+                <span>←</span> Volver al perfil
+            </a>
+        </footer>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/cursor.js" defer></script>
+    <script src="js/molecules.js" defer></script>
+    <script src="js/proyectos.js" defer></script>
+</body>
+</html>

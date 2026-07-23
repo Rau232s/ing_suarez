@@ -1,0 +1,349 @@
+/*======================================================
+  ESTILOS INVESTIGACIONES - PORTAFOLIO NINO SUÁREZ
+======================================================*/
+:root {
+    --bg-color: #FAF8F4;
+    --text-primary: #2F2422;
+    --text-secondary: #554A48;
+    
+    --border-terracota: #8C4336;
+    --border-terracota-hover: #A65244;
+    --terracota-glow: rgba(166, 82, 68, 0.22);
+    --transition-curve: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+body.page-investigaciones {
+    background: linear-gradient(180deg, #FAF8F4 0%, #F6F2EB 100%);
+    font-family: 'Manrope', sans-serif;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Viewport Fijo en Escritorio */
+    position: relative;
+    overflow-y: auto !important; 
+}
+
+/* CANVAS MOLÉCULAS DE FONDO */
+#molecules {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* WRAPPER PRINCIPAL SINGLE VIEWPORT */
+.investigaciones-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    padding: 30px 50px 20px 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ENCABEZADO / HERO */
+.header-investigacion {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-micro-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--border-terracota);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 4px;
+}
+
+.main-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+    color: var(--text-primary);
+    line-height: 1.1;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* GRILLA DE 3 TARJETAS */
+.biblioteca {
+    max-width: 1280px;
+    width: 100%;
+    margin: 20px auto 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* TARJETAS CON GLASSMORPHISM */
+.research-card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1.5px solid var(--border-terracota);
+    border-radius: 16px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.35s var(--transition-curve), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.card-header-meta {
+    margin-bottom: 12px;
+}
+
+.card-tag {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--border-terracota);
+    font-weight: 700;
+}
+
+.card-body-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--text-primary);
+    margin: 0 0 8px 0;
+}
+
+.card-body-content h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--border-terracota);
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+
+.card-body-content p {
+    font-size: 0.83rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0 0 20px 0;
+}
+
+/* BOTÓN DE ACCIÓN LECTURA PDF */
+.card-footer-action {
+    margin-top: auto;
+}
+
+.btn-pdf {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: var(--border-terracota);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-pdf span {
+    transition: transform 0.3s ease;
+}
+
+.btn-pdf:hover {
+    background-color: var(--border-terracota-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px var(--terracota-glow);
+}
+
+.btn-pdf:hover span {
+    transform: translate(2px, -2px);
+}
+
+/* PIE DE PÁGINA */
+.investigaciones-footer {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.back-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border-bottom: 1.5px solid var(--border-terracota);
+    padding-bottom: 2px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.3s ease, border-color 0.3s ease, gap 0.3s ease;
+}
+
+.back-link span {
+    transition: transform 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--border-terracota);
+    border-color: var(--border-terracota);
+    gap: 10px;
+}
+
+.back-link:hover span {
+    transform: translateX(-4px);
+}
+
+/* ANIMACIONES DE FLOTACIÓN SUTIL */
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+}
+
+.card-animated {
+    animation: floatAnimation 5s ease-in-out infinite;
+    will-change: transform;
+}
+
+.float-delay-1 { animation-delay: 0s; }
+.float-delay-2 { animation-delay: 0.8s; }
+.float-delay-3 { animation-delay: 1.6s; }
+
+.research-card:hover {
+    animation-play-state: paused !important;
+    transform: translateY(-8px) scale(1.01) !important;
+    border-color: var(--border-terracota-hover) !important;
+    box-shadow: 0 12px 28px var(--terracota-glow) !important;
+}
+
+/* RESPONSIVO PARA MÓVILES (<= 900px) */
+@media screen and (max-width: 900px) {
+    body.page-investigaciones {
+        overflow-y: auto !important;
+        height: auto !important;
+    }
+
+    .investigaciones-wrapper {
+        height: auto !important;
+        padding: 85px 20px 40px 20px !important;
+        gap: 30px;
+    }
+
+    .main-title {
+        font-size: 2.2rem;
+    }
+
+    .biblioteca {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+
+    .card-animated {
+        animation: none !important;
+        transform: none !important;
+    }
+
+    .research-card:hover {
+        transform: none !important;
+    }
+}
+/*======================================================
+  CORRECCIÓN DEL MENÚ HAMBURGUESA Y OVERLAY
+======================================================*/
+
+/* Botón Hamburguesa en la esquina superior derecha */
+.hamburger-menu {
+    position: fixed !important;
+    top: 25px !important;
+    right: 25px !important;
+    z-index: 1000 !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    padding: 8px !important;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hamburger-menu:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.hamburger-menu span {
+    width: 22px;
+    height: 2px;
+    background-color: var(--text-primary, #2F2422);
+    border-radius: 2px;
+    display: block;
+}
+
+/* Panel Desplegable Oculto a la derecha */
+.menu-overlay {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 300px !important;
+    height: 100vh !important;
+    background: rgba(250, 248, 244, 0.96) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    z-index: 999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transform: translateX(100%) !important; /* Lo oculta fuera de pantalla */
+    transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) !important;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.06);
+}
+
+/* Cuando el menú se abre con el botón */
+.menu-overlay.open {
+    transform: translateX(0) !important;
+}
+
+.menu-overlay ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px !important;
+}
+
+.menu-overlay a {
+    text-decoration: none !important;
+    font-family: 'Manrope', sans-serif !important;
+    font-size: 0.95rem !important;
+    color: var(--text-primary, #2F2422) !important;
+    transition: color 0.3s ease;
+}
+
+.menu-overlay a:hover, 
+.menu-overlay a.active {
+    color: var(--border-terracota, #8C4336) !important;
+    font-weight: 700 !important;
+}
