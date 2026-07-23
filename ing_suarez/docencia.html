@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docencia & Cátedra Universitaria | Nino Raúl Suárez Loras</title>
+
+    <!-- Tipografías Oficiales -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Reales -->
+    <link rel="stylesheet" href="css/molecules.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/docencia.css">
+</head>
+<body class="page-docencia">
+
+    <!-- Transición y Cursor -->
+    <div class="page-transition-overlay" id="pageTransitionOverlay"></div>
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Canvas de Moléculas -->
+    <canvas id="molecules"></canvas>
+
+    <!-- Menú Hamburguesa -->
+    <button class="hamburger-menu" id="hamburgerBtn" aria-label="Abrir Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Menú Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <ul>
+            <li><a href="index.html" class="nav-link">01. Inicio</a></li>
+            <li><a href="perfil.html" class="nav-link ">02. Perfil & Mapa</a></li>
+            <li><a href="sobre-mi.html" class="nav-link">03. Sobre Mí</a></li>
+            <li><a href="formacion.html" class="nav-link ">05. Formación</a></li>
+            <li><a href="docencia.html" class="nav-link active">06. Cátedra & Docencia</a></li>
+            <li><a href="investigaciones.html" class="nav-link">07. Investigaciones</a></li>
+            <li><a href="habilidades.html" class="nav-link">08. Habilidades & Tools</a></li>
+            <li><a href="proyectos.html" class="nav-link">09. Trayectoria & Proyectos</a></li>
+            <li><a href="formacion.html" class="nav-link">10. Estudios & Diplomados</a></li>
+            <li><a href="contacto.html" class="nav-link">11. Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- Layout Single Viewport Compacto -->
+    <main class="docencia-wrapper">
+        
+        <!-- Encabezado Hero -->
+        <header class="docencia-hero">
+            <span class="section-micro-tag">06 / DOCENCIA UNIVERSITARIA & FORMACIÓN TÉCNICA</span>
+            <h1 class="main-title">Docencia & Cátedra Universitaria</h1>
+            <p class="subtitle">
+                Formador en Ciencias Exactas, Ingeniería Petroquímica y Metodologías Activas (STEAM e Inteligencia Artificial).
+            </p>
+        </header>
+
+        <!-- Bento Grid Reorganizado -->
+        <section class="docencia-grid">
+
+            <!-- Columna 1: Cátedra & Evaluación Universitaria -->
+            <article class="docencia-card card-animated float-delay-1">
+                <div class="card-header">
+                    <span class="card-tag">01 / Respaldo Universitario</span>
+                    <h2>Cátedra & Auxiliatura</h2>
+                </div>
+                <div class="card-body">
+                    <div class="timeline-item highlight">
+                        <span class="time-tag">2019 — 2022</span>
+                        <h3>Auxiliar de Cátedra de Química</h3>
+                        <p class="institution">FCIMV — Univ. Autónoma Juan Misael Saracho (UAJMS)</p>
+                        <p class="desc">Facilitación teórica y de laboratorio en Química General, Química Orgánica e Inorgánica durante 3+ años.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time-tag">2025</span>
+                        <h3>Jurado Calificador de Grado</h3>
+                        <p class="institution">Evaluación de Proyectos de Grado Técnico (Trinidad)</p>
+                        <p class="desc">Evaluación metódica y técnica en defensas públicas institucionales.</p>
+                    </div>
+
+                    <div class="timeline-item mini">
+                        <span class="time-tag">2024 — 2025</span>
+                        <h3>Dirección Académica ChristaMUN</h3>
+                        <p class="desc">Liderazgo pedagógico, oratoria estratégica y formación en debate diplomático.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Columna 2: Trayectoria Docente & Proyectos -->
+            <article class="docencia-card card-animated float-delay-2">
+                <div class="card-header">
+                    <span class="card-tag">02 / Experiencia en Aula</span>
+                    <h2>Trayectoria Docente</h2>
+                </div>
+                <div class="card-body">
+                    <div class="timeline-item">
+                        <span class="badge-status vivo">Actual</span>
+                        <h3>Docente Académico</h3>
+                        <p class="institution">Resultado Final (Tarija)</p>
+                        <p class="desc">Enseñanza de alto rendimiento en ciencias exactas para ingreso y reforzamiento universitario.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time-tag">2026</span>
+                        <h3>Docente de Innovación & STEAM</h3>
+                        <p class="institution">STEAM Academy (Cochabamba)</p>
+                        <p class="desc">Impartición de talleres de oratoria, lógica científica y tecnologías aplicadas.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time-tag">2025 — 2026</span>
+                        <h3>Docente de Aula Secundaría</h3>
+                        <p class="institution">Colegio Christa McAuliffe</p>
+                        <p class="desc">Docente titular en Química, Física y Técnica Tecnológica General.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Columna 3: Oferta Académica / Materias Aptas -->
+            <article class="docencia-card card-animated float-delay-3">
+                <div class="card-header">
+                    <span class="card-tag">03 / Competencias de Cátedra</span>
+                    <h2>Asignaturas Aptas para Impartir</h2>
+                </div>
+                <div class="card-body">
+                    
+                    <div class="subject-group">
+                        <span class="group-title">🧪 Química & Procesos</span>
+                        <div class="skills-chips">
+                            <span class="chip principal">Química General</span>
+                            <span class="chip principal">Química Orgánica</span>
+                            <span class="chip principal">Química Inorgánica</span>
+                            <span class="chip">Fisicoquímica</span>
+                        </div>
+                    </div>
+
+                    <div class="subject-group">
+                        <span class="group-title">📐 Ciencias Exactas & Matemática</span>
+                        <div class="skills-chips">
+                            <span class="chip">Cálculo I, II y III</span>
+                            <span class="chip">Ecuaciones Diferenciales</span>
+                            <span class="chip">Física General</span>
+                            <span class="chip">Estadística</span>
+                        </div>
+                    </div>
+
+                    <div class="subject-group">
+                        <span class="group-title">⚙️ Ingeniería & Tecnología Educativa</span>
+                        <div class="skills-chips">
+                            <span class="chip">Resistencia de Materiales</span>
+                            <span class="chip tech">Educación STEAM & IA</span>
+                            <span class="chip tech">Programación Web (HTML/CSS/JS)</span>
+                            <span class="chip tech">Diseño Gráfico Técnico</span>
+                        </div>
+                    </div>
+
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Footer Flotante -->
+        <footer class="docencia-footer">
+            <a href="perfil.html" class="back-link">
+                <span>←</span> Volver al perfil
+            </a>
+        </footer>
+
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/cursor.js" defer></script>
+    <script src="js/molecules.js" defer></script>
+    <script src="js/docencia.js" defer></script>
+</body>
+</html>

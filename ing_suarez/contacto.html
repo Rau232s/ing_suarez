@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Nino Raúl Suárez Loras</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/molecules.css">
+    <link rel="stylesheet" href="/ing_suarez/css/cursor.css">
+    <link rel="stylesheet" href="/ing_suarez/css/contacto.css">
+</head>
+<body class="page-contacto">
+
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <div class="page-transition-overlay" id="pageTransitionOverlay"></div>
+
+    <canvas id="molecules"></canvas>
+
+    <button class="hamburger-menu" id="hamburgerBtn" aria-label="Abrir Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <ul>
+            <li><a href="index.html" class="nav-link">01. Inicio</a></li>
+            <li><a href="perfil.html" class="nav-link">02. Perfil & Mapa</a></li>
+            <li><a href="sobre-mi.html" class="nav-link">03. Sobre Mí</a></li>
+            <li><a href="formacion.html" class="nav-link">05. Formación</a></li>
+            <li><a href="docencia.html" class="nav-link">06. Cátedra & Docencia</a></li>
+            <li><a href="investigaciones.html" class="nav-link">07. Investigaciones</a></li>
+            <li><a href="habilidades.html" class="nav-link">08. Habilidades & Tools</a></li>
+            <li><a href="proyectos.html" class="nav-link">09. Trayectoria & Proyectos</a></li>
+            <li><a href="formacion.html" class="nav-link">10. Estudios & Diplomados</a></li>
+            <li><a href="contacto.html" class="nav-link active">11. Contacto</a></li>
+        </ul>
+    </div>
+
+    <main class="single-viewport-container" id="bentoGrid">
+
+        <div class="contact-card-wrapper card-animated float-delay-1">
+            
+            <header class="contact-header">
+                <span class="contact-tag">09 / Conectemos</span>
+                <h1 class="contact-title">¿Hablamos de un proyecto o colaboración?</h1>
+                <p class="contact-subtitle">
+                    Disponible para consultoría técnica, proyectos académicos, conferencias, talleres y colaboraciones multidisciplinarias.
+                </p>
+            </header>
+
+            <div class="contact-channels-grid">
+                
+                <a href="https://wa.me/59165200690" target="_blank" rel="noopener noreferrer" class="channel-card card-animated float-delay-2">
+                    <div class="channel-icon">💬</div>
+                    <div class="channel-info">
+                        <h3>WhatsApp Directo</h3>
+                        <p>+591 65200690</p>
+                    </div>
+                    <span class="channel-arrow">↗</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/nino-raul-s-125046123/?skipRedirect=true" target="_blank" rel="noopener noreferrer" class="channel-card card-animated float-delay-3">
+                    <div class="channel-icon">💼</div>
+                    <div class="channel-info">
+                        <h3>LinkedIn</h3>
+                        <p>Nino Raúl Suárez Loras</p>
+                    </div>
+                    <span class="channel-arrow">↗</span>
+                </a>
+
+                <a href="mailto:nsuarezloras@gmail.com" class="channel-card card-animated float-delay-4">
+                    <div class="channel-icon">✉️</div>
+                    <div class="channel-info">
+                        <h3>Correo Electrónico</h3>
+                        <p>nsuarezloras@gmail.com</p>
+                    </div>
+                    <span class="channel-arrow">✉</span>
+                </a>
+
+            </div>
+
+            <footer class="contact-footer">
+                <span>Disponible para viajes y proyectos remotos</span>
+            </footer>
+
+        </div>
+
+    </main>
+
+    <script src="js/molecules.js" defer></script>
+    <script src="js/cursor.js" defer></script>
+    <script src="js/contacto.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,236 @@
+/*======================================================
+  ESTILOS PROYECTOS - CARRUSEL SHOWCASE COMPACTO
+======================================================*/
+:root {
+    --bg-color: #FAF8F4;
+    --text-primary: #2F2422;
+    --text-secondary: #554A48;
+    
+    --border-terracota: #8C4336;
+    --border-terracota-hover: #A65244;
+    --terracota-glow: rgba(166, 82, 68, 0.28);
+    --transition-curve: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+body.page-proyectos {
+    background: linear-gradient(180deg, #FAF8F4 0%, #F6F2EB 100%);
+    font-family: 'Manrope', sans-serif;
+    color: var(--text-primary);
+    margin: 0; padding: 0;
+    width: 100vw; height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#molecules {
+    position: fixed; inset: 0;
+    width: 100vw; height: 100vh;
+    z-index: 1; pointer-events: none;
+}
+
+/* MENÚ HAMBURGUESA Y OVERLAY */
+.hamburger-menu {
+    position: fixed !important; top: 25px !important; right: 25px !important;
+    z-index: 1000 !important; background: transparent !important;
+    border: none !important; outline: none !important; cursor: pointer !important;
+    display: flex !important; flex-direction: column !important; gap: 5px !important;
+    padding: 8px !important; opacity: 0.6; transition: opacity 0.3s ease;
+}
+
+.hamburger-menu:hover { opacity: 1; }
+
+.hamburger-menu span {
+    width: 22px; height: 2px; background-color: var(--text-primary);
+    border-radius: 2px; display: block;
+}
+
+.menu-overlay {
+    position: fixed !important; top: 0 !important; right: 0 !important;
+    width: 300px !important; height: 100vh !important;
+    background: rgba(250, 248, 244, 0.96) !important;
+    backdrop-filter: blur(12px) !important; z-index: 999 !important;
+    display: flex !important; align-items: center !important; justify-content: center !important;
+    transform: translateX(100%) !important;
+    transition: transform 0.4s var(--transition-curve) !important;
+}
+
+.menu-overlay.open { transform: translateX(0) !important; }
+
+.menu-overlay ul { list-style: none !important; padding: 0 !important; margin: 0 !important; display: flex !important; flex-direction: column !important; gap: 18px !important; }
+
+.menu-overlay a { text-decoration: none !important; font-family: 'Manrope', sans-serif !important; font-size: 0.95rem !important; color: var(--text-primary) !important; transition: color 0.3s ease; }
+
+.menu-overlay a:hover, .menu-overlay a.active { color: var(--border-terracota) !important; font-weight: 700 !important; }
+
+/* WRAPPER PRINCIPAL */
+.proyectos-wrapper {
+    position: relative; z-index: 2;
+    width: 100vw; height: 100vh;
+    padding: 25px 0 20px 0; box-sizing: border-box;
+    display: flex; flex-direction: column; justify-content: space-between;
+}
+
+.proyectos-hero { text-align: center; max-width: 800px; margin: 0 auto; padding: 0 20px; }
+
+.section-micro-tag {
+    font-family: 'Cormorant Garamond', serif; font-size: 0.98rem; font-weight: 700;
+    color: var(--border-terracota); text-transform: uppercase; letter-spacing: 1.5px;
+}
+
+.main-title {
+    font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 600;
+    margin: 2px 0 4px 0; color: var(--text-primary); line-height: 1.1;
+}
+
+.subtitle { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.4; margin: 0; }
+
+/* CONTENEDOR CARRUSEL FULL-WIDTH */
+.carousel-container {
+    width: 100vw;
+    overflow: hidden;
+    padding: 25px 0;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    will-change: transform;
+}
+
+/* TARJETAS COMPACTAS EN REPOSO */
+.project-card {
+    width: 360px;
+    height: 330px; /* Reducido: Encaja perfecto con el texto sin vacíos */
+    background: rgba(255, 255, 255, 0.95);
+    border: 1.5px solid var(--border-terracota);
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    transition: height 0.4s var(--transition-curve), transform 0.4s var(--transition-curve), box-shadow 0.4s ease, border-color 0.4s ease;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MEDIA / GALERÍA DE IMÁGENES */
+.card-media {
+    width: 100%;
+    height: 190px;
+    position: relative;
+    overflow: hidden;
+    background: #111;
+}
+
+.slide-img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; opacity: 0;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    transform: scale(1);
+}
+
+.slide-img.active { opacity: 1; transform: scale(1.05); }
+
+.media-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.3) 100%);
+}
+
+/* INFORMACIÓN DE LA TARJETA EN REPOSO */
+.card-info {
+    padding: 14px 18px 10px 18px; /* Reducimos el padding inferior */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #FFF;
+    gap: 4px;
+}
+
+.project-tag {
+    font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 1.2px; color: var(--border-terracota);
+}
+
+.card-info h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem; font-weight: 600; margin: 0;
+    color: var(--text-primary); line-height: 1.2;
+}
+
+.project-desc {
+    font-size: 0.76rem; color: var(--text-secondary);
+    line-height: 1.35; margin: 0;
+}
+
+/* ÁREA DE ACCIÓN (BOTÓN CENTRADO) */
+.card-action {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s var(--transition-curve), opacity 0.25s ease 0.05s, margin-top 0.3s ease;
+    margin-top: 0;
+}
+
+.btn-project {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: var(--border-terracota);
+    color: #FFF;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-project:hover {
+    background-color: var(--border-terracota-hover);
+    transform: scale(1.04);
+}
+
+/* ======================================================
+   DESPLIEGUE EN HOVER (AMPLIACIÓN Y BOTÓN VISIBLE CENTRADO)
+====================================================== */
+.project-card:hover {
+    height: 360px; /* Reducido de 390px a 360px para eliminar el margen inferior sobrante */
+    transform: translateY(-6px) scale(1.02);
+    border-color: var(--border-terracota-hover);
+    box-shadow: 0 14px 32px var(--terracota-glow);
+    z-index: 10;
+}
+
+.project-card:hover .card-action {
+    max-height: 42px;
+    opacity: 1;
+    margin-top: 8px; /* Margen superior controlado para separar del texto */
+}
+
+/* FOOTER */
+.proyectos-footer { text-align: center; }
+
+.back-link {
+    color: var(--text-primary); text-decoration: none; font-size: 0.85rem;
+    font-weight: 600; border-bottom: 1.5px solid var(--border-terracota);
+    padding-bottom: 2px; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s ease;
+}
+
+.back-link:hover { color: var(--border-terracota); }
+
+/* MÓVILES */
+@media screen and (max-width: 900px) {
+    body.page-proyectos { overflow-y: auto !important; height: auto !important; }
+    .proyectos-wrapper { height: auto !important; padding: 90px 0 30px 0 !important; gap: 20px; }
+    .carousel-container { overflow-x: auto !important; padding: 10px 15px; }
+    .carousel-track { width: auto !important; transform: none !important; }
+    .project-card { width: 300px; height: 370px !important; }
+    .card-action { max-height: 50px !important; opacity: 1 !important; margin-top: 10px !important; }
+}

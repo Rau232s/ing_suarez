@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil | Nino Raúl Suárez Loras</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/molecules.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body class="page-perfil">
+
+    <div class="page-transition-overlay" id="pageTransitionOverlay"></div>
+
+    <canvas id="molecules"></canvas>
+
+    <button class="hamburger-menu" id="hamburgerBtn" aria-label="Abrir Menú de Navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="menu-overlay" id="menuOverlay">
+        <ul>
+            <li><a href="index.html" class="nav-link">01. Inicio</a></li>
+            <li><a href="perfil.html" class="nav-link active">02. Perfil & Mapa</a></li>
+            <li><a href="sobre-mi.html" class="nav-link">03. Sobre Mí</a></li>
+            <li><a href="formacion.html" class="nav-link">05. Formación</a></li>
+            <li><a href="docencia.html" class="nav-link">06. Cátedra & Docencia</a></li>
+            <li><a href="investigaciones.html" class="nav-link">07. Investigaciones</a></li>
+            <li><a href="habilidades.html" class="nav-link">08. Habilidades & Tools</a></li>
+            <li><a href="proyectos.html" class="nav-link">09. Trayectoria & Proyectos</a></li>
+            <li><a href="formacion.html" class="nav-link">10. Estudios & Diplomados</a></li>
+            <li><a href="contacto.html" class="nav-link">11. Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="interactive-node-container" id="nodeContainer">
+
+        <svg class="connections-svg" id="connectionsSvg"></svg>
+
+        <div class="center-profile-wrapper" id="centralNode">
+            <div class="organic-blob" id="organicBlob"></div>
+            <div class="decorative-arc"></div>
+            <div class="center-photo-node">
+                <img src="assets/images/profile.png" alt="Nino Raúl Suárez Loras" class="profile-center-img">
+            </div>
+        </div>
+
+        <div class="card-node pos-top-left float-delay-1" data-index="0">
+            <div class="card-info">
+                <span class="card-tag">01 / Identidad</span>
+                <h3>Información & Identidad</h3>
+            </div>
+            <div class="card-expand-content">
+                <ul class="card-details-list">
+                    <li><strong>Correo:</strong> n.suarezloras@gmail.com</li>
+                    <li><strong>Nacimiento:</strong> 21 de Junio, 1999</li>
+                    <li><strong>Perfil:</strong> Ingeniero Petroquímico enfocado en educación, investigación y tecnología.</li>
+                    <li><strong>Idiomas:</strong> Español (Nativo), Inglés (Avanzado C1), Moxeño Trinitario (Nativo).</li>
+                    <li><strong>Movilidad:</strong> Licencia Categoría A y disponibilidad para viajar.</li>
+                </ul>
+                <a href="sobre-mi.html" class="card-more-link nav-link">Ver más <span>→</span></a>
+            </div>
+        </div>
+
+        <div class="card-node pos-mid-left float-delay-2" data-index="1">
+            <div class="card-info">
+                <span class="card-tag">02 / Especialización</span>
+                <h3>Cátedra & Docencia</h3>
+            </div>
+            <div class="card-expand-content">
+                <p class="card-desc">Experiencia académica en educación superior y formación técnica:</p>
+                <ul class="card-details-list">
+                    <li>Auxiliaría de Cátedra: Química General, Química Orgánica e Inorgánica (UAJMS).</li>
+                    <li>Asignaturas impartidas: Cálculo I-III, Ecuaciones Diferenciales, Física, Estadística y Resistencia de Materiales.</li>
+                    <li>Especialista en proyectos de Educación STEAM e Inteligencia Artificial aplicada a la enseñanza.</li>
+                </ul>
+                <a href="docencia.html" class="card-more-link nav-link">Ver más <span>→</span></a>
+            </div>
+        </div>
+
+        <div class="card-node pos-bot-left float-delay-3" data-index="2">
+            <div class="card-info">
+                <span class="card-tag">03 / Ciencia</span>
+                <h3>Investigaciones & Artículos</h3>
+            </div>
+            <div class="card-expand-content">
+                <ul class="card-details-list">
+                    <li><strong>Pirólisis Catalítica:</strong> Obtención de aromáticos (BTX) a partir de plásticos reciclados (Ventana Científica, Vol. 13 N° 22).</li>
+                    <li><strong>Extracción de Xilenos:</strong> Método Algawi-Jaffar-Khalaf para análisis espectrofotométrico.</li>
+                    <li><strong>Modelo HI-GI:</strong> Evaluación matemática de crecimiento y bienestar organizacional en Esports (Caso KZDivision).</li>
+                </ul>
+                <a href="investigaciones.html" class="card-more-link nav-link">Ver más <span>→</span></a>
+            </div>
+        </div>
+
+        <div class="card-node pos-top-right float-delay-4" data-index="3">
+            <div class="card-info">
+                <span class="card-tag">04 / Software</span>
+                <h3>Habilidades & Tools</h3>
+            </div>
+            <div class="card-expand-content">
+                <ul class="card-details-list">
+                    <li><strong>Simulación & Análisis:</strong> Aspen Plus, HYSYS, Power BI, Excel avanzado.</li>
+                    <li><strong>Operación Técnica:</strong> Control de inventarios, formulación e insumos de laboratorio.</li>
+                    <li><strong>Tecnología Web:</strong> HTML5, CSS3, JavaScript, Python, Photoshop e Illustrator.</li>
+                </ul>
+                <a href="habilidades.html" class="card-more-link nav-link">Ver más <span>→</span></a>
+            </div>
+        </div>
+
+        <div class="card-node pos-mid-right float-delay-5" data-index="4">
+            <div class="card-info">
+                <span class="card-tag">05 / Experiencia</span>
+                <h3>Trayectoria & Proyectos</h3>
+            </div>
+            <div class="card-expand-content">
+                <ul class="card-details-list">
+                    <li><strong>Keravnos Studio:</strong> Consultor en supervisión de obras y gestión contractual.</li>
+                    <li><strong>U.E. Christa McAuliffe:</strong> Encargado de Laboratorio y control de insumos.</li>
+                    <li><strong>Liderazgo:</strong> Director en Instituto de Inteligencias Múltiples (IIM) y proyectos como Cleopatra Cosméticos, Vigilantes del Agua y KZDivision.</li>
+                </ul>
+                <a href="proyectos.html" class="card-more-link nav-link">Ver más <span>→</span></a>
+            </div>
+        </div>
+
+        <div class="card-node pos-bot-right float-delay-6" data-index="5">
+            <div class="card-info">
+                <span class="card-tag">06 / Académico</span>
+                <h3>Estudios & Diplomados</h3>
+            </div>
+            <div class="card-expand-content">
+                <ul class="card-details-list">
+                    <li><strong>Ingeniería Petroquímica:</strong> Titulado en Universidad Autónoma Juan Misael Saracho (UAJMS).</li>
+                    <li><strong>Diplomado en Educación Superior:</strong> Concluido y Titulado (UABJB).</li>
+                    <li><strong>Diplomados Concluidos:</strong> Seguridad Industrial (UPEA) y Metodología de la Investigación (UAP).</li>
+                </ul>
+                <a href="formacion.html" class="card-more-link nav-link">Ver más <span>→</span></a>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="js/cursor.js"></script>
+    <script src="js/molecules.js"></script>
+    <script src="js/cardInteractions.js"></script>
+</body>
+</html>

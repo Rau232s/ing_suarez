@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigaciones | Nino Raúl Suárez Loras</title>
+
+    <!-- Tipografías Oficiales -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Hojas de Estilo Reales (Rutas Relativas para GitHub Pages) -->
+    
+    <link rel="stylesheet" href="css/molecules.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/investigaciones.css">
+</head>
+<body class="page-investigaciones">
+
+    <!-- Transición y Cursor Custom -->
+    <div class="page-transition-overlay" id="pageTransitionOverlay"></div>
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Canvas de Moléculas (ID Standard del Proyecto) -->
+    <canvas id="molecules"></canvas>
+
+    <!-- Menú Hamburguesa -->
+    <button class="hamburger-menu" id="hamburgerBtn" aria-label="Abrir Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Overlay Navegación Completa -->
+    <div class="menu-overlay" id="menuOverlay">
+        <ul>
+            <li><a href="index.html" class="nav-link">01. Inicio</a></li>
+            <li><a href="perfil.html" class="nav-link">02. Perfil & Mapa</a></li>
+            <li><a href="sobre-mi.html" class="nav-link">03. Sobre Mí</a></li>
+            <li><a href="formacion.html" class="nav-link ">05. Formación</a></li>
+            <li><a href="docencia.html" class="nav-link">06. Cátedra & Docencia</a></li>
+            <li><a href="investigaciones.html" class="nav-link active">07. Investigaciones</a></li>
+            <li><a href="habilidades.html" class="nav-link">08. Habilidades & Tools</a></li>
+            <li><a href="proyectos.html" class="nav-link">09. Trayectoria & Proyectos</a></li>
+            <li><a href="formacion.html" class="nav-link">10. Estudios & Diplomados</a></li>
+            <li><a href="contacto.html" class="nav-link">11. Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- Layout Principal -->
+    <main class="investigaciones-wrapper">
+        
+        <!-- Hero Encabezado -->
+        <header class="header-investigacion">
+            <span class="section-micro-tag">05 / CIENCIA & DESARROLLO</span>
+            <h1 class="main-title">Investigaciones</h1>
+            <p class="subtitle">
+                Artículos científicos, proyectos de investigación y desarrollo de modelos aplicados.
+            </p>
+        </header>
+
+        <!-- Biblioteca / Grilla de Investigaciones -->
+        <!-- Biblioteca / Grilla de Investigaciones (5 Tarjetas) -->
+        <section class="biblioteca">
+
+            <!-- Card 01: Pirólisis Catalítica -->
+            <article class="research-card card-animated float-delay-1">
+                <div class="card-header-meta">
+                    <span class="card-tag">01 / Publicación Científica</span>
+                </div>
+                <div class="card-body-content">
+                    <h2>Pirólisis Catalítica de Plásticos Reciclados</h2>
+                    <h3>Revista Científica Ventana Científica<br>Vol. 13 N°22</h3>
+                    <p>
+                        Obtención de hidrocarburos aromáticos (BTX) mediante pirólisis catalítica de plásticos reciclados a escala laboratorio.
+                    </p>
+                </div>
+                <div class="card-footer-action">
+                    <a href="assets/pdf/articulo_1.pdf" target="_blank" rel="noopener noreferrer" class="btn-pdf">
+                        📄 Leer PDF <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 02: Extracción de Xilenos -->
+            <article class="research-card card-animated float-delay-2">
+                <div class="card-header-meta">
+                    <span class="card-tag">02 / Análisis Espectrofotométrico</span>
+                </div>
+                <div class="card-body-content">
+                    <h2>Extracción de Xilenos de Muestras Líquidas</h2>
+                    <h3>Método Algawi-Jaffar-Khalaf</h3>
+                    <p>
+                        Aplicación del método para el análisis espectrofotométrico de muestras líquidas con presencia de compuestos aromáticos.
+                    </p>
+                </div>
+                <div class="card-footer-action">
+                    <a href="assets/pdf/articulo_2.pdf" target="_blank" rel="noopener noreferrer" class="btn-pdf">
+                        📄 Leer PDF <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 03: Modelo HI-GI -->
+            <article class="research-card card-animated float-delay-3">
+                <div class="card-header-meta">
+                    <span class="card-tag">03 / Modelo Matemático</span>
+                </div>
+                <div class="card-body-content">
+                    <h2>Modelo Matemático HI-GI</h2>
+                    <h3>Desarrollo Organizacional y Bienestar</h3>
+                    <p>
+                        Modelo basado en indicadores matemáticos para evaluar bienestar, crecimiento y desarrollo dentro de organizaciones.
+                    </p>
+                </div>
+                <div class="card-footer-action">
+                    <a href="assets/pdf/articulo_3.pdf" target="_blank" rel="noopener noreferrer" class="btn-pdf">
+                        📄 Leer PDF <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 04: Seguridad y Salud Ocupacional (Kéravnos Studio) -->
+            <article class="research-card card-animated float-delay-1">
+                <div class="card-header-meta">
+                    <span class="card-tag">04 / Monografía de Postgrado</span>
+                </div>
+                <div class="card-body-content">
+                    <h2>Diagnóstico de Seguridad y Salud Ocupacional</h2>
+                    <h3>Empresa Kéravnos Studio Constructora y Remodelaciones</h3>
+                    <p>
+                        Evaluación de riesgos, normativa de seguridad industrial y propuesta de gestión en procesos constructivos.
+                    </p>
+                </div>
+                <div class="card-footer-action">
+                    <!-- Ruta mantenida: assets/pdf/articulo_4.pdf -->
+                    <a href="assets/pdf/articulo_4.pdf" target="_blank" rel="noopener noreferrer" class="btn-pdf">
+                        📄 Leer PDF <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 05: Habilidades Blandas (ChristaMun) -->
+            <article class="research-card card-animated float-delay-2">
+                <div class="card-header-meta">
+                    <span class="card-tag">05 / Investigación Educativa</span>
+                </div>
+                <div class="card-body-content">
+                    <h2>Desarrollo de Habilidades Socioemocionales y Blandas</h2>
+                    <h3>Colegio Christa McAuliffe — Caso BOLMUN Christa</h3>
+                    <p>
+                        Estudio sobre la percepción de estudiantes de secundaria sobre el impacto de actividades extracurriculares y modelos de debate.
+                    </p>
+                </div>
+                <div class="card-footer-action">
+                    <!-- Ruta mantenida: assets/pdf/articulo_5.pdf -->
+                    <a href="assets/pdf/articulo_5.pdf" target="_blank" rel="noopener noreferrer" class="btn-pdf">
+                        📄 Leer PDF <span>↗</span>
+                    </a>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Footer Integrado -->
+        <footer class="investigaciones-footer">
+            <a href="perfil.html" class="back-link">
+                <span>←</span> Volver al perfil
+            </a>
+        </footer>
+
+    </main>
+
+    <!-- Scripts en Orden de Ejecución -->
+    <script src="js/cursor.js" defer></script>
+    <script src="js/molecules.js" defer></script>
+    <script src="js/investigaciones.js" defer></script>
+</body>
+</html>

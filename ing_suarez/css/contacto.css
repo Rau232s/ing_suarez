@@ -1,0 +1,323 @@
+/*======================================================
+  ESTILOS VISTA CONTACTO - TARJETA TRANSLÚCIDA
+======================================================*/
+:root {
+    --bg-color: #faf8f400;
+    --text-primary: #2F2422;
+    --text-secondary: #554A48;
+    
+    --border-terracota: #8C4336;
+    --border-terracota-hover: #A65244;
+    --terracota-glow: rgba(166, 82, 68, 0.18);
+    --transition-curve: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+body.page-contacto {
+    background: linear-gradient(180deg, #faf8f400 0%, #F6F2EB 100%);
+    font-family: 'Manrope', sans-serif;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* OVERLAY DE TRANSICIÓN */
+.page-transition-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: var(--bg-color);
+    z-index: 9999;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 0.5s var(--transition-curve);
+}
+
+.page-transition-overlay.fade-in-complete {
+    opacity: 0;
+}
+
+/* MENÚ HAMBURGUESA */
+.hamburger-menu {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 1000;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hamburger-menu:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.hamburger-menu span {
+    width: 22px;
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    background: rgba(250, 248, 244, 0.96);
+    backdrop-filter: blur(12px);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.4s var(--transition-curve);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.06);
+}
+
+.menu-overlay.open {
+    transform: translateX(0);
+}
+
+.menu-overlay ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.menu-overlay a {
+    text-decoration: none;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.menu-overlay a:hover, .menu-overlay a.active {
+    color: var(--border-terracota);
+    font-weight: 700;
+}
+
+/* CONTENEDOR CENTRADO */
+.single-viewport-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+
+    opacity: 0;
+    transform: scale(0.95);
+    filter: blur(8px);
+    transition: opacity 0.8s var(--transition-curve), transform 0.8s var(--transition-curve), filter 0.8s var(--transition-curve);
+    pointer-events: none;
+}
+
+.single-viewport-container.viewport-appeared {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+}
+
+/* TARJETA TRANSLÚCIDA */
+.contact-card-wrapper {
+    pointer-events: auto;
+    background: rgba(255, 255, 255, 0.42);
+    border: 1.5px solid rgba(140, 67, 54, 0.35);
+    border-radius: 20px;
+    padding: 40px 45px;
+    max-width: 650px;
+    width: 100%;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 0 12px 35px var(--terracota-glow);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.contact-header {
+    text-align: center;
+}
+
+.contact-tag {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--border-terracota);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contact-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 10px 0;
+    color: var(--text-primary);
+}
+
+.contact-subtitle {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+/* GRILLA DE CANALES TRANSLÚCIDOS */
+.contact-channels-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.channel-card {
+    background: rgba(250, 248, 244, 0.65);
+    border: 1.5px solid var(--border-terracota);
+    border-radius: 12px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--text-primary);
+    backdrop-filter: blur(8px);
+    transition: transform 0.35s var(--transition-curve), border-color 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+}
+
+.channel-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+    margin-right: 15px;
+}
+
+.channel-info {
+    flex: 1;
+}
+
+.channel-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 2px 0;
+    color: var(--text-primary);
+}
+
+.channel-info p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.channel-arrow {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--border-terracota);
+    transition: transform 0.3s ease;
+}
+
+.channel-card:hover {
+    border-color: var(--border-terracota-hover);
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 8px 20px var(--terracota-glow);
+}
+
+.channel-card:hover .channel-arrow {
+    transform: translate(3px, -3px);
+}
+
+.contact-footer {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--border-terracota);
+    font-weight: 600;
+    padding-top: 12px;
+    border-top: 1px dashed rgba(140, 67, 54, 0.25);
+}
+
+/* FLOTABILIDAD */
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+}
+
+.card-animated {
+    animation: floatAnimation 5s ease-in-out infinite;
+    will-change: transform;
+}
+
+.float-delay-1 { animation-delay: 0s; }
+.float-delay-2 { animation-delay: 0.6s; }
+.float-delay-3 { animation-delay: 1.2s; }
+.float-delay-4 { animation-delay: 1.8s; }
+
+.contact-card-wrapper:hover {
+    animation-play-state: paused !important;
+}
+
+/* MÓVIL (<= 900PX) */
+@media screen and (max-width: 900px) {
+    body.page-contacto {
+        overflow-y: auto !important;
+        height: auto !important;
+    }
+
+    .single-viewport-container {
+        height: auto !important;
+        padding: 80px 16px 40px 16px !important;
+    }
+
+    .contact-card-wrapper {
+        padding: 30px 20px;
+    }
+
+    .contact-title {
+        font-size: 1.75rem;
+    }
+
+    .card-animated {
+        animation: none !important;
+        transform: none !important;
+    }
+}
+/* 1. Asegurar que el canvas de moléculas no ocupe espacio en el flujo */
+#molecules {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;          /* Queda al fondo */
+    pointer-events: none;
+}
+
+/* 2. Fijar el contenedor principal centrado sobre la pantalla */
+.contacto-container {    /* O el nombre de clase principal que tengas en tu HTML */
+    position: relative;
+    z-index: 1;          /* Queda encima de las moléculas */
+    min-height: 100vh;   /* Ocupa el alto completo de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

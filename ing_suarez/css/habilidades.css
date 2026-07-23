@@ -1,0 +1,214 @@
+/*======================================================
+  ESTILOS HABILIDADES - PORTAFOLIO NINO SUÁREZ
+======================================================*/
+:root {
+    --bg-color: #FAF8F4;
+    --text-primary: #2F2422;
+    --text-secondary: #554A48;
+    
+    --border-terracota: #8C4336;
+    --border-terracota-hover: #A65244;
+    --terracota-glow: rgba(166, 82, 68, 0.22);
+    --transition-curve: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+body.page-habilidades {
+    background: linear-gradient(180deg, #FAF8F4 0%, #F6F2EB 100%);
+    font-family: 'Manrope', sans-serif;
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#molecules {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* MENÚ HAMBURGUESA Y OVERLAY */
+.hamburger-menu {
+    position: fixed !important;
+    top: 25px !important;
+    right: 25px !important;
+    z-index: 1000 !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    padding: 8px !important;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.hamburger-menu:hover { opacity: 1; transform: scale(1.05); }
+
+.hamburger-menu span {
+    width: 22px; height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 2px; display: block;
+}
+
+.menu-overlay {
+    position: fixed !important;
+    top: 0 !important; right: 0 !important;
+    width: 300px !important; height: 100vh !important;
+    background: rgba(250, 248, 244, 0.96) !important;
+    backdrop-filter: blur(12px) !important;
+    z-index: 999 !important;
+    display: flex !important;
+    align-items: center !important; justify-content: center !important;
+    transform: translateX(100%) !important;
+    transition: transform 0.4s cubic-bezier(0.22, 0.61, 0.36, 1) !important;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.06);
+}
+
+.menu-overlay.open { transform: translateX(0) !important; }
+
+.menu-overlay ul {
+    list-style: none !important; padding: 0 !important; margin: 0 !important;
+    display: flex !important; flex-direction: column !important; gap: 18px !important;
+}
+
+.menu-overlay a {
+    text-decoration: none !important; font-family: 'Manrope', sans-serif !important;
+    font-size: 0.95rem !important; color: var(--text-primary) !important; transition: color 0.3s ease;
+}
+
+.menu-overlay a:hover, .menu-overlay a.active {
+    color: var(--border-terracota) !important; font-weight: 700 !important;
+}
+
+/* WRAPPER PRINCIPAL */
+.habilidades-wrapper {
+    position: relative; z-index: 2;
+    width: 100vw; height: 100vh;
+    padding: 25px 45px 15px 45px; box-sizing: border-box;
+    display: flex; flex-direction: column; justify-content: space-between;
+}
+
+.habilidades-hero { text-align: center; max-width: 800px; margin: 0 auto; }
+
+.section-micro-tag {
+    font-family: 'Cormorant Garamond', serif; font-size: 0.98rem; font-weight: 700;
+    color: var(--border-terracota); text-transform: uppercase; letter-spacing: 1.5px;
+}
+
+.main-title {
+    font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 600;
+    margin: 2px 0 4px 0; color: var(--text-primary); line-height: 1.1;
+}
+
+.subtitle { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.4; margin: 0; }
+
+/* BENTO GRID */
+.habilidades-grid {
+    max-width: 1300px; width: 100%; margin: auto;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    align-items: stretch;
+}
+
+.habilidades-card {
+    background: rgba(255, 255, 255, 0.92);
+    border: 1.5px solid var(--border-terracota); border-radius: 14px;
+    padding: 20px; backdrop-filter: blur(10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+    display: flex; flex-direction: column; gap: 12px;
+}
+
+.card-header h2 {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600;
+    margin: 2px 0 0 0; color: var(--text-primary);
+}
+
+.card-tag {
+    font-size: 0.68rem; text-transform: uppercase; letter-spacing: 1.2px;
+    color: var(--border-terracota); font-weight: 700;
+}
+
+.card-body { display: flex; flex-direction: column; gap: 12px; }
+
+/* PRODUCTOS Y ENTREGABLES */
+.product-item {
+    border-left: 2.5px solid var(--border-terracota);
+    padding-left: 10px;
+}
+
+.product-badge {
+    font-size: 0.62rem; font-weight: 700; padding: 2px 6px; border-radius: 10px;
+    display: inline-block; background: rgba(140, 67, 54, 0.12); color: var(--border-terracota);
+    margin-bottom: 2px;
+}
+
+.product-badge.tech {
+    background: rgba(46, 125, 50, 0.12); color: #2E7D32;
+}
+
+.product-item h3 { font-size: 0.88rem; font-weight: 700; margin: 2px 0; color: var(--text-primary); }
+
+.product-item .desc { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.35; margin: 0; }
+
+.tools-box {
+    background: rgba(250, 248, 244, 0.7); padding: 8px 10px; border-radius: 8px;
+    border: 1px dashed rgba(140, 67, 54, 0.25); margin-top: auto;
+}
+
+.tools-title { font-size: 0.72rem; font-weight: 700; color: var(--text-primary); display: block; margin-bottom: 5px; }
+
+.skills-chips { display: flex; flex-wrap: wrap; gap: 5px; }
+
+.chip {
+    font-size: 0.68rem; background: #FFF; border: 1px solid rgba(140, 67, 54, 0.3);
+    padding: 2px 7px; border-radius: 10px; font-weight: 600; color: var(--text-secondary);
+}
+
+.chip.principal { background: var(--border-terracota); color: #FFF; border-color: var(--border-terracota); }
+
+.chip.tech { background: rgba(234, 208, 200, 0.4); border-color: var(--border-terracota); color: var(--border-terracota); font-weight: 700; }
+
+/* FOOTER */
+.habilidades-footer { text-align: center; }
+
+.back-link {
+    color: var(--text-primary); text-decoration: none; font-size: 0.85rem;
+    font-weight: 600; border-bottom: 1.5px solid var(--border-terracota);
+    padding-bottom: 2px; display: inline-flex; align-items: center; gap: 6px; transition: color 0.3s ease;
+}
+
+.back-link:hover { color: var(--border-terracota); }
+
+/* ANIMACIONES Y RESPONSIVO */
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0px); }
+}
+
+.card-animated { animation: floatAnimation 5s ease-in-out infinite; }
+.float-delay-1 { animation-delay: 0s; }
+.float-delay-2 { animation-delay: 0.8s; }
+.float-delay-3 { animation-delay: 1.6s; }
+
+.habilidades-card:hover {
+    animation-play-state: paused !important;
+    transform: translateY(-6px) scale(1.01) !important;
+    border-color: var(--border-terracota-hover) !important;
+    box-shadow: 0 10px 24px var(--terracota-glow) !important;
+}
+
+@media screen and (max-width: 900px) {
+    body.page-habilidades { overflow-y: auto !important; height: auto !important; }
+    .habilidades-wrapper { height: auto !important; padding: 90px 18px 30px 18px !important; gap: 20px; }
+    .habilidades-grid { grid-template-columns: 1fr !important; }
+    .card-animated { animation: none !important; }
+}

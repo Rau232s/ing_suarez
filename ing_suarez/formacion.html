@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudios & Formación | Nino Raúl Suárez Loras</title>
+
+    <!-- Tipografías Oficiales -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Reales -->
+    
+    <link rel="stylesheet" href="css/molecules.css">
+    <link rel="stylesheet" href="css/cursor.css">
+    <link rel="stylesheet" href="css/formacion.css">
+</head>
+<body class="page-formacion">
+
+    <!-- Transición y Cursor -->
+    <div class="page-transition-overlay" id="pageTransitionOverlay"></div>
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Canvas de Moléculas (ID Canónico) -->
+    <canvas id="molecules"></canvas>
+
+    <!-- Menú Hamburguesa -->
+    <button class="hamburger-menu" id="hamburgerBtn" aria-label="Abrir Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Menú Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <ul>
+            <li><a href="index.html" class="nav-link">01. Inicio</a></li>
+            <li><a href="perfil.html" class="nav-link">02. Perfil & Mapa</a></li>
+            <li><a href="sobre-mi.html" class="nav-link">03. Sobre Mí</a></li>
+            <li><a href="formacion.html" class="nav-link active">05. Formación</a></li>
+            <li><a href="docencia.html" class="nav-link">06. Cátedra & Docencia</a></li>
+            <li><a href="investigaciones.html" class="nav-link">07. Investigaciones</a></li>
+            <li><a href="habilidades.html" class="nav-link">08. Habilidades & Tools</a></li>
+            <li><a href="proyectos.html" class="nav-link">09. Trayectoria & Proyectos</a></li>
+            <li><a href="formacion.html" class="nav-link">10. Estudios & Diplomados</a></li>
+            <li><a href="contacto.html" class="nav-link">11. Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- Layout Single Viewport Compacto -->
+    <main class="formacion-wrapper">
+        
+        <!-- Encabezado Compacto -->
+        <header class="formacion-hero">
+            <span class="section-micro-tag">04 / RUTA ACADÉMICA</span>
+            <h1 class="main-title">Estudios & Diplomados</h1>
+            <p class="subtitle">
+                Especialización continua en ingeniería, docencia universitaria, seguridad industrial y técnicas de laboratorio.
+            </p>
+        </header>
+
+        <!-- Bento Grid de 3 Columnas Compactas -->
+        <section class="formacion-grid">
+
+            <!-- Columna 1: Grado y Postgrados -->
+            <article class="formacion-card card-animated float-delay-1">
+                <div class="card-header">
+                    <span class="card-tag">01 / Grado & Postgrados</span>
+                    <h2>Títulos & Diplomados</h2>
+                </div>
+                <div class="card-body">
+                    <div class="timeline-item">
+                        <span class="badge-status verde">Titulado</span>
+                        <h3>Ingeniería Petroquímica</h3>
+                        <p class="institution">Univ. Autónoma Juan Misael Saracho (UAJMS)</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="badge-status verde">Titulado</span>
+                        <h3>Diplomado en Educación Superior</h3>
+                        <p class="institution">Univ. Autónoma del Beni José Ballivián (UABJB)</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="badge-status terracota">Concluido</span>
+                        <h3>Diplomado en Seguridad Industrial</h3>
+                        <p class="institution">Universidad Pública de El Alto (UPEA)</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="badge-status terracota">Concluido</span>
+                        <h3>Diplomado en Metodología de Investigación</h3>
+                        <p class="institution">Universidad Amazónica de Pando (UAP)</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Columna 2: Prácticas Profesionales -->
+            <article class="formacion-card card-animated float-delay-2">
+                <div class="card-header">
+                    <span class="card-tag">02 / Laboratorio & Campo</span>
+                    <h2>Prácticas Profesionales</h2>
+                </div>
+                <div class="card-body">
+                    <div class="timeline-item">
+                        <span class="time-tag">Jul — Oct 2022</span>
+                        <h3>EPSA Manchaco S.A.</h3>
+                        <p class="institution">Villa Montes</p>
+                        <ul class="bullet-list">
+                            <li>Muestreo y análisis de agua potable y aguas residuales.</li>
+                            <li>Control e inventario de reactivos y equipos de laboratorio.</li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="time-tag">Ago — Dic 2023</span>
+                        <h3>CEANID</h3>
+                        <p class="institution">Tarija (Centro de Análisis e Investigación)</p>
+                        <ul class="bullet-list">
+                            <li>Capacitación especializada en control de calidad.</li>
+                            <li>Métodos de análisis de productos alimenticios y muestras líquidas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Columna 3: Certificaciones & Cursos -->
+            <article class="formacion-card card-animated float-delay-3">
+                <div class="card-header">
+                    <span class="card-tag">03 / Herramientas & Tools</span>
+                    <h2>Cursos & Certificaciones</h2>
+                </div>
+                <div class="card-body">
+                    <div class="innova-box">
+                        <span class="innova-title">Escuela de Capacitación INNOVA</span>
+                        <div class="skills-chips">
+                            <span class="chip">Microsoft Word</span>
+                            <span class="chip">Microsoft Excel</span>
+                            <span class="chip">Microsoft PowerPoint</span>
+                            <span class="chip">Microsoft Windows</span>
+                        </div>
+                    </div>
+
+                    <div class="additional-box">
+                        <h3>Otras Capacitaciones</h3>
+                        <ul class="bullet-list">
+                            <li>Fábrica de Contenidos & Herramientas de IA.</li>
+                            <li>Educación STEAM & Liderazgo Académico.</li>
+                            <li>Idiomas: Inglés Avanzado (C1) y Moxeño Trinitario.</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- Footer Flotante -->
+        <footer class="formacion-footer">
+            <a href="perfil.html" class="back-link">
+                <span>←</span> Volver al perfil
+            </a>
+        </footer>
+
+    </main>
+
+    <!-- Scripts en Orden Exacto -->
+    <script src="js/cursor.js" defer></script>
+    <script src="js/molecules.js" defer></script>
+    <script src="js/formacion.js" defer></script>
+</body>
+</html>
